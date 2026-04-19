@@ -1,9 +1,9 @@
 # apple-maps-mcp
 
-[![Tests](https://github.com/izecell/apple-maps-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/izecell/apple-maps-mcp/actions/workflows/test.yml)
+[![Tests](https://github.com/izecell/apple-maps-mcp/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/izecell/apple-maps-mcp/actions/workflows/test.yml)
 [![Node 22+](https://img.shields.io/badge/node-22+-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CalVer](https://img.shields.io/badge/calver-YYYY.M.PATCH-22bfda.svg)](https://calver.org/)
+[![CalVer](https://img.shields.io/badge/calver-yyyy.m.patch-22bfda.svg)](https://calver.org/)
 
 An MCP server for Apple Maps on macOS. Opens Maps.app via URL schemes and answers
 geocoding / search / directions / ETA queries — using the **Apple Maps Server API**
@@ -33,29 +33,41 @@ npm install
 
 ## Configuration
 
-Add to your MCP host config (Claude Desktop example —
-`~/Library/Application Support/Claude/claude_desktop_config.json`):
+### GitHub Copilot CLI
+
+Add to `~/.copilot/mcp-config.json`:
 
 ```json
 {
   "mcpServers": {
     "apple-maps": {
-      "command": "node",
+      "command": "/opt/homebrew/bin/node",
       "args": [
         "--experimental-strip-types",
         "/absolute/path/to/apple-maps-mcp/src/index.ts"
       ],
       "env": {
         "APPLE_MAPS_AUTH_TOKEN": ""
-      }
+      },
+      "tools": ["*"]
     }
   }
 }
 ```
 
+Then reload servers in the CLI (e.g. via the `/mcp` menu) and the tools
+appear under the `apple-maps-` prefix.
+
+### Other MCP hosts
+
+Use the same `command` / `args` / `env` shape — most hosts (Claude Desktop,
+Zed, Cursor, etc.) accept this format inside their own `mcpServers` block.
+On Intel Macs without Homebrew on `/opt/homebrew`, use the path printed by
+`which node`.
+
 Leave `APPLE_MAPS_AUTH_TOKEN` empty to use the free OpenStreetMap / OSRM
-backend. Set it to a signed Maps Auth Token (JWT) to use the Apple Maps Server
-API instead.
+backend. Set it to a signed Maps Auth Token (JWT) to use the Apple Maps
+Server API instead.
 
 ## Backends
 
