@@ -1,0 +1,10 @@
+# <type>: <subject>
+
+# <body>
+
+# <footer>
+
+# Type: feat, fix, docs, refactor, test, chore, ci
+# Subject: 50 chars or less, imperative mood ("add" not "added")
+# Body: Wrap at 72 chars. Explain WHAT and WHY (not HOW).
+# Footer: Reference issues (Closes #N), breaking changes (BREAKING CHANGE: ...).

@@ -1,0 +1,55 @@
+{
+  "name": "apple-maps-mcp",
+  "version": "2026.4.0",
+  "description": "MCP server for Apple Maps on macOS — URL-scheme actions plus Apple Maps Server API (with free OpenStreetMap/OSRM fallback) for geocoding, search, directions, and ETA.",
+  "type": "module",
+  "license": "MIT",
+  "author": "izecell",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izecell/apple-maps-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/izecell/apple-maps-mcp/issues"
+  },
+  "homepage": "https://github.com/izecell/apple-maps-mcp",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "apple-maps",
+    "maps",
+    "macos",
+    "geocoding",
+    "directions",
+    "openstreetmap",
+    "osrm",
+    "nominatim"
+  ],
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "bin": {
+    "apple-maps-mcp": "./src/index.ts"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types tests/*.test.ts",
+    "check-all": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
