@@ -9,6 +9,23 @@ patch in the same month). Tags are prefixed with `v`.
 
 ## [Unreleased]
 
+## [2026.4.1] - 2026-04-19
+
+### Changed
+- README: replace Claude Desktop config snippet with a GitHub Copilot CLI
+  example (`~/.copilot/mcp-config.json`); note that the same shape works
+  in other MCP hosts.
+- README: lowercase the CalVer placeholder badge (`yyyy.m.patch`).
+- README: pin the Tests badge to `?branch=main` so it consistently shows
+  the main-branch status instead of the latest workflow run on any ref.
+
+### Added
+- CONTRIBUTING.md: documented branch protection rules on `main`
+  (no direct pushes, no force pushes, no deletion, required `Tests / Node
+  22.x` and `Tests / Node 24.x` checks, branches must be up to date).
+- Repository ruleset enforcing the above on `main` (with a
+  `pull_request`-only bypass for the repository admin).
+
 ## [2026.4.0] - 2026-04-19
 
 Initial release.
@@ -38,5 +55,6 @@ Initial release.
   and extracts the matching `CHANGELOG.md` section as release notes.
 - CalVer release scheme documented in `README.md`.
 
-[Unreleased]: https://github.com/izecell/apple-maps-mcp/compare/v2026.4.0...HEAD
+[Unreleased]: https://github.com/izecell/apple-maps-mcp/compare/v2026.4.1...HEAD
+[2026.4.1]: https://github.com/izecell/apple-maps-mcp/releases/tag/v2026.4.1
 [2026.4.0]: https://github.com/izecell/apple-maps-mcp/releases/tag/v2026.4.0

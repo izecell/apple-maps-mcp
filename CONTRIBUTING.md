@@ -76,6 +76,20 @@ npm test
 6. Open a PR with a clear description and a reproduction or example call
    for new tools.
 
+## Branch protection
+
+The `main` branch is protected by a repository ruleset:
+
+- Direct pushes are blocked — all changes go through pull requests.
+- Force pushes are blocked.
+- Branch deletion is blocked.
+- The `Tests / Node 22.x` and `Tests / Node 24.x` workflow checks must
+  pass before a PR can be merged.
+- PR branches must be up to date with `main` before merging.
+
+If you have write access, the ruleset is visible at
+[Settings → Rules → Rulesets](https://github.com/izecell/apple-maps-mcp/settings/rules).
+
 ## Reporting issues
 
 Please include:
