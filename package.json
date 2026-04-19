@@ -1,6 +1,6 @@
 {
   "name": "apple-maps-mcp",
-  "version": "2026.4.1",
+  "version": "2026.4.2",
   "description": "MCP server for Apple Maps on macOS — URL-scheme actions plus Apple Maps Server API (with free OpenStreetMap/OSRM fallback) for geocoding, search, directions, and ETA.",
   "type": "module",
   "license": "MIT",
