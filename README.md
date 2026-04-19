@@ -3,6 +3,7 @@
 [![Tests](https://github.com/izecell/apple-maps-mcp/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/izecell/apple-maps-mcp/actions/workflows/test.yml)
 [![Node 22+](https://img.shields.io/badge/node-22+-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Release](https://img.shields.io/github/v/release/izecell/apple-maps-mcp?label=release&color=22bfda)](https://github.com/izecell/apple-maps-mcp/releases)
 [![CalVer](https://img.shields.io/badge/calver-yyyy.m.patch-22bfda.svg)](https://calver.org/)
 
 An MCP server for Apple Maps on macOS. Opens Maps.app via URL schemes and answers

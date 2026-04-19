@@ -9,6 +9,13 @@ patch in the same month). Tags are prefixed with `v`.
 
 ## [Unreleased]
 
+## [2026.4.2] - 2026-04-19
+
+### Changed
+- README: add a dynamic Release badge that pulls the latest GitHub release
+  tag (so the displayed version updates automatically); the existing CalVer
+  badge stays as a static "scheme" indicator.
+
 ## [2026.4.1] - 2026-04-19
 
 ### Changed
